@@ -1,0 +1,10 @@
+1. near login
+2. near create-account crowdfund.srijuu.testnet --masterAccount srijuu.testnet
+3. bash ./build.sh
+4.  near deploy --accountId crowdfund.srijuu.testnet --wasmFile ./target/wasm32-unknown-unknown/release/hello_near.wasm
+5. near call crowdfund.srijuu.testnet add_crowdfund '{"title": "Eliots eye sight", "donate": 30, "description":"Raise funds for little Eliot to see again. Loss of sight was caused by an accident to the head"}' --accountId srijuu.testnet
+6. near call crowdfund.srijuu.testnet add_vote '{"id":0}' --accountId srijuu.testnet
+7. near call crowdfund.srijuu.testnet add_donation '{"id":0, "amount":1}' --accountId srijuu.testnet
+8. near call crowdfund.srijuu.testnet list_crowdfunds --accountId crowdfund.srijuu.testnet
+
+https://explorer.testnet.near.org/accounts/crowdfund.srijuu.testnet
